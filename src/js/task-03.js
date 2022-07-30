@@ -13,7 +13,7 @@ const images = [
   },
 ];
 const gallery = document.querySelector('.gallery');
-
-images.map(foto => {
-
-})
+const markup = images
+  .map((fotos) => `<li class="picture"><img src= "${fotos.url}" alt="${fotos.alt}" width="200px" /></li>`);
+gallery.insertAdjacentHTML("beforeend", markup);
+gallery.style.display = "flex";
